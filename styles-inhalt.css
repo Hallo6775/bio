@@ -97,22 +97,15 @@ main {
     flex: 1;
     animation: fadeIn 1s ease-in-out;
 }
-p {
-    white-space: normal; /* Standardwert, Zeilenumbrüche und Leerzeichen werden normal behandelt */
-    line-height: 1.5; /* Erhöht den Abstand zwischen den Zeilen um das 1,5-Fache der Schriftgröße */
-    margin-bottom: 1em; /* Setzt einen Abstand nach jedem Absatz */
-  }
+p { 
+    margin: 0; 
+    padding: 0; 
+    white-space: normal; 
+    line-height: 1.5; 
+    letter-spacing: normal; 
+    word-spacing: normal; 
 
-  p {
-    margin: 0; /* Entfernt zusätzliche Abstände */
-    padding: 0; /* Entfernt zusätzliche Einrückungen */
-  }
-  
-  @media (max-width: 600px) {
-    p {
-      margin-bottom: 0.5em;
-    }
-  }
+}
 
 section {
     padding: 20px;
