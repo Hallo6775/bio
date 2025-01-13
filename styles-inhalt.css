@@ -103,6 +103,17 @@ p {
     margin-bottom: 1em; /* Setzt einen Abstand nach jedem Absatz */
   }
 
+  p {
+    margin: 0; /* Entfernt zusätzliche Abstände */
+    padding: 0; /* Entfernt zusätzliche Einrückungen */
+  }
+  
+  @media (max-width: 600px) {
+    p {
+      margin-bottom: 0.5em;
+    }
+  }
+
 section {
     padding: 20px;
     margin: 20px;
