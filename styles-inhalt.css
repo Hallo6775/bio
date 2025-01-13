@@ -97,6 +97,11 @@ main {
     flex: 1;
     animation: fadeIn 1s ease-in-out;
 }
+p {
+    white-space: normal; /* Standardwert, Zeilenumbrüche und Leerzeichen werden normal behandelt */
+    line-height: 1.5; /* Erhöht den Abstand zwischen den Zeilen um das 1,5-Fache der Schriftgröße */
+    margin-bottom: 1em; /* Setzt einen Abstand nach jedem Absatz */
+  }
 
 section {
     padding: 20px;
