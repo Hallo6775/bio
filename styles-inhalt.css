@@ -1,0 +1,156 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(to right, #00796b, #004d40);
+    color: white;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    transition: color 0.3s ease;
+}
+
+header h1:hover {
+    color: #ffab00; /* Farbe beim Hover */
+}
+
+.hamburger-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0; /* Menü nach links verschieben */
+    margin-top: 10px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px; /* Abstand unter dem Header */
+    align-self: flex-start; /* Hamburger-Menü links anzeigen */
+}
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #004d40;
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    top: 60px; /* Positionierung angepasst */
+    left: 0;
+    z-index: 1001; /* Sicherstellen, dass das Menü über dem Inhalt liegt */
+}
+
+input[type="checkbox"]:checked + .menu-icon + .nav-menu {
+    display: flex;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Menüelemente untereinander */
+}
+
+.nav-menu ul li {
+    margin: 10px 0;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin-top: 160px; /* Platz für fixierten Header und Navigation */
+    padding: 20px;
+    flex: 1;
+    animation: fadeIn 1s ease-in-out;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+section .source {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+section h2 {
+    color: #00796b;
+    transition: color 0.3s ease;
+}
+
+section h2:hover {
+    color: #ffab00; /* Farbe beim Hover */
+}
+
+footer {
+    background-color: #00796b;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Animationen */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
